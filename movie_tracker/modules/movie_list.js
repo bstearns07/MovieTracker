@@ -1,14 +1,14 @@
-import taskStorage from 'movie_tracker/modules/movie_storage';
+import movieStorage from 'movie_storage';
 
 let tasks = [];         // private variable
 
-const taskList = {
+const movieList = {
     load() {
-        tasks = taskStorage.retrieve();
+        tasks = movieStorage.retrieve();
         return this;
     },
     save() {
-        taskStorage.store(tasks);
+        movieStorage.store(tasks);
         return this;
     },
     add(task) {
@@ -22,7 +22,7 @@ const taskList = {
     },
     clear() {
         tasks.length = 0;
-        taskStorage.remove();
+        movieStorage.remove();
         return this;
     },
     sortByDueDate() {
@@ -36,4 +36,4 @@ const taskList = {
     }
 };
 
-export default taskList;
+export default movieList;
