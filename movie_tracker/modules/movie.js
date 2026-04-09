@@ -1,4 +1,4 @@
-class Task {
+class Movie {
     constructor(description, dueDate) {
         this.description = description;
         this.dueDate = new Date(dueDate);
@@ -17,4 +17,4 @@ class Task {
     }
 }
 
-export default Task;
+export default Movie;

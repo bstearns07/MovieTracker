@@ -1,5 +1,5 @@
 import * as storage from 'storage';
-import Task from 'task';
+import Movie from 'movie_tracker/modules/movie';
 
 const taskStorage = {
     retrieve() { 
@@ -7,7 +7,7 @@ const taskStorage = {
         const taskArray = storage.retrieve("tasks");
         if(taskArray) {
             for(let obj of taskArray) {
-                tasks.push(new Task(obj.description, obj.dueDate)); 
+                tasks.push(new Movie(obj.description, obj.dueDate));
             }
         }
         return tasks;

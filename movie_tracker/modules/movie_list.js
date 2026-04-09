@@ -1,4 +1,4 @@
-import taskStorage from 'task_storage';
+import taskStorage from 'movie_tracker/modules/movie_storage';
 
 let tasks = [];         // private variable
 

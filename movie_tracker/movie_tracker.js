@@ -1,4 +1,4 @@
-import taskList from "task_list";
+import taskList from "movie_tracker/movie_tracker";
 import Task from "task";
 import * as dom from "DOM";
 
@@ -26,7 +26,7 @@ dom.load(() => {
         
         let message = "";
         if (newTask.description === "") {
-            message = "Task is required. ";
+            message = "Movie is required. ";
         }
         if (newTask.hasInvalidDueDate || newTask.isPastDue) {
             message += "Due Date must be a valid date in the future."
