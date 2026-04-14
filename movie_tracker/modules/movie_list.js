@@ -10,38 +10,41 @@
 
 import movieStorage from 'movie_storage';
 
-let tasks = [];         // private variable
+let movies = [];         // private variable
 
 const movieList = {
     load() {
-        tasks = movieStorage.retrieve();
+        movies = movieStorage.retrieve();
         return this;
     },
     save() {
-        movieStorage.store(tasks);
+        movieStorage.store(movies);
         return this;
     },
     add(task) {
-        tasks.push(task);
+        movies.push(task);
         return this;
     },
     delete(i) {
         this.sortByDueDate(); // sort so in same order as page
-        tasks.splice(i, 1);
+        movies.splice(i, 1);
         return this;
     },
     clear() {
-        tasks.length = 0;
+        movies.length = 0;
         movieStorage.remove();
         return this;
     },
     sortByDueDate() {
-        tasks.sort((a, b) => a.dueDate - b.dueDate);
-        return this;
-    },
+        movies.sort((a, b) => {
+            return a.genre.toLowerCase().localeCompare(b.genre.toLowerCase()) ||
+                (b.rating - a.rating) ||
+                a.title.toLowerCase().localeCompare(b.title.toLowerCase());
+        });
+    },    
     * [Symbol.iterator]() {
-        for (let task of tasks) {
-            yield task;
+        for (let movie of movies) {
+            yield movie;
         }
     }
 };
