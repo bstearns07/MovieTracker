@@ -1,3 +1,12 @@
+/***********************************************************************************************************************
+ * Program............: Smartwatch FAQ
+ * Programmers........: Ben Stearns and Kaleb Aregay
+ * Date...............: 4-14-26
+ * GitHub Repo........: https://github.com/bstearns07/MovieTracker
+ * Program Summary....: a JavaScript web application for storing/displaying a list of movies
+ * File Description...: defines the CSS styling rules for the application interface
+ **********************************************************************************************************************/
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: white;

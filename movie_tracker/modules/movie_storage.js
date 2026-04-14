@@ -1,3 +1,12 @@
+/***********************************************************************************************************************
+ * Program............: Smartwatch FAQ
+ * Programmers........: Ben Stearns and Kaleb Aregay
+ * Date...............: 4-14-26
+ * GitHub Repo........: https://github.com/bstearns07/MovieTracker
+ * Program Summary....: a JavaScript web application for storing/displaying a list of movies
+ * File Description...: defines an object literal defining logic for movie storage manipulation
+ **********************************************************************************************************************/
+
 import * as storage from 'storage';
 import Movie from 'movie';
 
