@@ -26,7 +26,7 @@ const movieList = {
         return this;
     },
     delete(i) {
-        this.sortByDueDate(); // sort so in same order as page
+        this.sortMovieData(); // sort so in same order as page
         movies.splice(i, 1);
         return this;
     },
@@ -35,11 +35,12 @@ const movieList = {
         movieStorage.remove();
         return this;
     },
-    sortByDueDate() {
+    sortMovieData() {
         movies.sort((a, b) => {
-            return a.genre.toLowerCase().localeCompare(b.genre.toLowerCase()) ||
-                (b.rating - a.rating) ||
-                a.title.toLowerCase().localeCompare(b.title.toLowerCase());
+            return a.title.toLowerCase().localeCompare(b.title.toLowerCase()) ||
+                a.genre.toLowerCase().localeCompare(b.genre.toLowerCase()) ||
+                (b.rating - a.rating)
+
         });
     },    
     * [Symbol.iterator]() {

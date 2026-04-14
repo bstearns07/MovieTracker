@@ -13,7 +13,7 @@ import Movie from "movie";
 import * as dom from "DOM"
 
 const displaymovies = () => {
-    movieList.sortByDueDate();
+    movieList.sortMovieData();
 
     const select = dom.get("#movies");
     select.textContent = "";  // clear previous movies
@@ -31,35 +31,42 @@ dom.load(() => {
         dom.clear("#msg");             // clear any previous message
         
         const newmovie = new Movie(
-            dom.getValue("#movie"),
-            dom.getValue("#due_date"));  
+            dom.getValue("#title"),
+            dom.getValue("#genre"),
+            dom.getValue("#rating")
+            );
         
         let message = "";
-        if (newmovie.description === "") {
-            message = "Movie is required. ";
+        if (newmovie.title === "") {
+            message += "Movie is required.\n";
         }
-        if (newmovie.hasInvalidDueDate || newmovie.isPastDue) {
-            message += "Due Date must be a valid date in the future."
-        } 
+        if (newmovie.rating === "") {
+            message += "Rating is required.\n";
+        }
+        // if (newmovie.hasInvalidDueDate || newmovie.isPastDue) {
+        //     message += "Due Date must be a valid date in the future."
+        // }
 
         if (message === "") {
             movieList.load().add(newmovie).save();
-            dom.clear("#movie");
-            dom.clear("#due_date");
+            dom.clear("#title");
+            dom.clear("#genre");
+            dom.clear("#rating");
             displaymovies();
         } else {
             dom.setText("#msg", message);
-            dom.select("#movie");
+            dom.select("#title");
         }     
     });
     
     dom.addClick("#clear_movies", () => {
         movieList.clear();
         dom.clear("#movies");
-        dom.clear("#movie");
-        dom.clear("#due_date");
+        dom.clear("#title");
+        dom.clear("#genre");
+        dom.clear("#rating");
         dom.clear("#msg");
-        dom.focus("#movie");
+        dom.focus("#title");
     });  
 
     dom.addClick("#delete_movie", () => {
