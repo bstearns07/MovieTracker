@@ -11,6 +11,11 @@ import * as storage from 'storage';
 import Movie from 'movie';
 
 const movieStorage = {
+    /**
+     * Retrieves all movies from web storage as an array
+     *
+     * @returns {Movie[]}
+     */
     retrieve() { 
         const movies = [];
         const movieArray = storage.retrieve("movies");
@@ -21,9 +26,21 @@ const movieStorage = {
         }
         return movies;
     },
+    /**
+     * Saves an array of movies into web storage
+     *
+     * @param {Movie[]} movies An array of Movie objects to save
+     *
+     * @returns {IterableIterator<Movie>} An iterator that yields each Movie in the collection.
+     */
     store(movies) {
         storage.store("movies", movies);
     },
+    /**
+     * Removes all movies from web storage
+     *
+     * @returns {void}
+     */
     remove() { 
         storage.remove("movies");
     }

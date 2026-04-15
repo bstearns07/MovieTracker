@@ -64,7 +64,8 @@ function clear(selector) {
  * @param {string} selector - The CSS selector for the element.
  */
 function focus(selector) {
-    get(selector).focus();
+    const elem = get(selector);
+    if (elem) elem.focus();
 }
 
 /**

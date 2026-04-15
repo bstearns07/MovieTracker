@@ -8,7 +8,7 @@
  **********************************************************************************************************************/
 
 /**
- * Retrieves and parses data from localStorage by key.
+ * Retrieves and parses JSON data from localStorage by key.
  *
  * @param {string} key - The key used to store the data.
  * @returns {any|null} The parsed JavaScript object if found, otherwise null.

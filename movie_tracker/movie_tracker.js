@@ -27,6 +27,7 @@ const displaymovies = () => {
 }
 
 dom.load(() => {
+    dom.focus("#title");
     dom.addClick("#add_movie", () => {
         dom.clear("#msg");             // clear any previous message
         
@@ -43,27 +44,26 @@ dom.load(() => {
         if (newmovie.rating === "") {
             message += "Rating is required.\n";
         }
-        // if (newmovie.hasInvalidDueDate || newmovie.isPastDue) {
-        //     message += "Due Date must be a valid date in the future."
-        // }
+        else if (newmovie.rating < 0 || newmovie.rating > 10) {
+            message += "Rating must be between 0 and 10.\n";
+        }
 
         if (message === "") {
             movieList.load().add(newmovie).save();
             dom.clear("#title");
-            dom.clear("#genre");
             dom.clear("#rating");
             displaymovies();
         } else {
             dom.setText("#msg", message);
             dom.select("#title");
-        }     
+        }
+        dom.focus("#title");
     });
     
     dom.addClick("#clear_movies", () => {
         movieList.clear();
         dom.clear("#movies");
         dom.clear("#title");
-        dom.clear("#genre");
         dom.clear("#rating");
         dom.clear("#msg");
         dom.focus("#title");

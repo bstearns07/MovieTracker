@@ -45,9 +45,11 @@ select#movies {
     overflow-x: scroll;
     overflow-y: scroll;
 }
-p {
+#msg {
     color: red;
     text-align: center;
+    width: 100%;
+    white-space: pre-line;
 }
 #form {
     float: left;
