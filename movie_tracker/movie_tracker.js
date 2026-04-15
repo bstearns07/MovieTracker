@@ -14,7 +14,7 @@ import * as dom from "DOM"
 
 /**
  * Sorts movie data
- * Clears the existing options
+ * Clears the existing options.
  *
  * @function displayMovies
  * @return {void}
