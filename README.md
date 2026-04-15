@@ -1,4 +1,4 @@
-# ⌚ Movie Tracker
+# 🎬 Movie Tracker
 ![HTML](https://img.shields.io/badge/HTML-5-orange)
 ![CSS](https://img.shields.io/badge/CSS-3-blue)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
@@ -48,11 +48,12 @@ And that's all folks!
 ---
 
 ## 🚀 Live Demo
-![Smartwatch FAQ Demo](assets/demo.gif)<br>
-[🔗 Click Here to Open the Smartwatch FAQ Demo ↗](https://bstearns07.github.io/SmartwatchFAQ/)
+
+[![Open Demo](https://img.shields.io/badge/▶%20Open%20Live%20Demo-ff4b4b?style=for-the-badge)](https://bstearns07.github.io/MovieTracker/)
+
+![Demo](assets/demo.gif)
 
 ---
-
 ## ✨ Features
 
 
