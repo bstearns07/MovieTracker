@@ -12,6 +12,13 @@ import movieList from "movie_list";
 import Movie from "movie";
 import * as dom from "DOM"
 
+/**
+ * Sorts movie data
+ * Clears the existing options
+ *
+ * @function displayMovies
+ * @return {void}
+ */
 const displaymovies = () => {
     movieList.sortMovieData();
 
@@ -26,8 +33,21 @@ const displaymovies = () => {
     dom.focus("#movie");
 }
 
+/**
+ * To set initial focus
+ * Adds the event listener for button clicks
+ * loads stored movies and displays them
+ */
 dom.load(() => {
+
+    /** Set initial focus to title input field */
     dom.focus("#title");
+
+    /**
+     * Handles adding a new movie to the list
+     * validates required fields and rating range
+     * Displays invalid error message
+     */
     dom.addClick("#add_movie", () => {
         dom.clear("#msg");             // clear any previous message
         
@@ -59,7 +79,10 @@ dom.load(() => {
         }
         dom.focus("#title");
     });
-    
+
+    /**
+     * Clears all movies and resets all form fields.
+     */
     dom.addClick("#clear_movies", () => {
         movieList.clear();
         dom.clear("#movies");
@@ -67,8 +90,12 @@ dom.load(() => {
         dom.clear("#rating");
         dom.clear("#msg");
         dom.focus("#title");
-    });  
+    });
 
+    /**
+     * Deletes selected movies from the list
+     * Displays error message if no movie selected
+     */
     dom.addClick("#delete_movie", () => {
         dom.clear("#msg");             // clear any previous message
         
@@ -80,6 +107,8 @@ dom.load(() => {
             displaymovies();
         }
     });
+
+    /** Load stored movies and display them */
     movieList.load()
     displaymovies();
 });
