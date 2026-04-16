@@ -10,7 +10,8 @@
 
 import movieList from "movie_list";
 import Movie from "movie";
-import * as dom from "DOM"
+
+
 
 /**
  * Sorts movie data
