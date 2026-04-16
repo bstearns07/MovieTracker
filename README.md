@@ -55,7 +55,12 @@ And that's all folks!
 
 ---
 ## ✨ Features
-
+- Data Validation
+- All movies are stored in your browser's Web Storage
+- Output display of all your movies in storage
+- "Add Movie" and "Clear Movies" buttons for adding a movie and clearing all movies from storage
+- "Delete Movie" to remove whatever movie is highlighted from your list from web storage
+- Class and module file directory structure
 
 ---
 
@@ -81,20 +86,40 @@ And that's all folks!
 ---
 
 ## 🧠 New Topics Covered
-
+- Web Storage: a way of storing data in a web browser's memory as a JSON string
+- Objects: a data structure collection of related properties and methods
+- Classes: the blueprint for an object that allows for multiple instances to be instantiated
+- Modules: files containing self-contained, reusable code that's kept out of global space. Only code that's needed is exposed to other parts of the application
+- More advanced array method like .sort()
 
 ---
 
 ## 💻 Code Snippets
-| Concept                      | Description                                                                                                 |
-|------------------------------|-------------------------------------------------------------------------------------------------------------|
-| `export default`             | Allows a module to export a single value (named or anonymous). Doesn't require curly braces when importing. |
-| `Symbol.iterator`            | Defines how a class behaves during iteration (like `for...of` loops) by returning a generator or iterator.  |
- | `import * as dom from "DOM"` | imports everthing in a module under an alias                                                                |
-| `constructor()`              | creates an instance of an object |                                                                           |
+| Concept                      | Description                                                                                                                               |
+|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| `export default`             | Allows a module to export a single value (named or anonymous). Doesn't require curly braces when importing.                               |
+| `Symbol.iterator`            | Defines how a class behaves during iteration (like `for...of` loops) by returning a generator or iterator.                                |
+ | `import * as dom from "DOM"` | imports everthing in a module under an alias                                                                                              |
+| `constructor()`              | creates an instance of an object                                                                                                          |          
+| `sort(a,b)`                  | sorts an array by looping through each element, comparing that element to the next one, and swapping places depending on how they compare |                                                                                  |                                                                                                      |   
 
 ## 📘 What We Learned
-
+There's a lot learned in this project. How you can work with array in JavaScript is completely different than any other language.
+Methods like sort() and reduce() allow you to sort an array or reduce it to one value however you want. How these methods
+work depends on the function you pass to them. This make JavaScript a very versitile language to use.<br>
+<br>
+Web storage is also a pivotal skill to learn in JavaScript. It allows you to store data in a web browser's storage
+however long you like as a JSON string. You can then retrieve this data later to do things like repopulate fields in a 
+form. Objects are also introduced here, which act as a collection of related properties and methods.<br>
+<br>
+Probably the biggest aspect of this program was the separation of code into different files, namely modules and class files.
+Modules are files containing resusable code that focuses on one thing. These are typically variable and functions.
+This code can then be exposed to other parts of your program to use, but only the parts you choose to. Everything else is
+kept private and prevents polluting global space. Classes act as the blueprint for an object so you can be instantiated
+as many times as you need.<br>
+<br>
+Finally there's importmapping, a short script defining the filepaths for all your classes and modules. That way, if these
+paths were to ever change you only have to update these in your inportmap.
 
 ---
 
@@ -111,4 +136,4 @@ And that's all folks!
 
 ---
 
-⬆️ [Back to Top](#movie-tracker)
+⬆️ [Back to Top](#-movie-tracker)
