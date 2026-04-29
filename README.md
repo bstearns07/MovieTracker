@@ -3,26 +3,29 @@
 ![CSS](https://img.shields.io/badge/CSS-3-blue)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
 ![License](https://img.shields.io/badge/License-MIT-green)<br>
-![movie-tracker](assets/intro.png)
 
 ---
 
 ## 👤 Authors
-Ben Stearns - [@bstearns07](https://github.com/bstearns07) <br>
+Ben Stearns - [@bstearns07](https://github.com/bstearns07)
+
 Kaleb Aregay - [@Kalebk24](https://github.com/Kalebk24)
+
+📅 Date: 4/15/2026
 
 ---
 
 ## 📑 Table of Contents
-- [📌 Summary](#-summary)
-- [⚙️ How It Works](#-how-it-works-)
-- [🚀 Live Demo](#-live-demo)
-- [✨ Features](#-features)
-- [🧰 Tech Stack](#-tech-stack)
-- [🧠 New-Topics Covered](#-new-topics-covered)
-- [💻 Code Snippets](#-code-snippets)
-- [📘 What We Learned](#-what-we-learned)
-- [🖼 Screenshots](#-screenshots)
+- 📌 [Summary](#-summary)
+- ⭐ [How It Works](#-how-it-works)
+- 🚀 [Live Demo](#-live-demo)
+- ✨ [Features](#-features)
+- 🧰 [Tech Stack](#-tech-stack)
+- 🔧 [Development Tools](#-development-tools)
+- 🧩 [Core Concepts](#-core-concepts)
+- 📝 [New Topics Covered](#-new-topics-covered)
+- 📘 [What I Learned](#-what-i-learned)
+- 🖼 [Screenshots](#-screenshots)
 
 ---
 
@@ -36,7 +39,7 @@ For full program details, refer to [Program Requirements](./assets/ProgramInstru
 
 ---
 
-## ⚙️ How It Works 
+## ⭐ How It Works 
 1. Open index.html to begin
 2. Start adding movies by typing in their information in the form provided and click "Add Movie"
 3. Your list of movies will begin being displayed in the text area provided
@@ -54,6 +57,7 @@ And that's all folks!
 ![Demo](assets/demo.gif)
 
 ---
+
 ## ✨ Features
 - Data Validation
 - All movies are stored in your browser's Web Storage
@@ -71,6 +75,14 @@ And that's all folks!
 - CSS3 (Layout & Styling)
 - Vanilla JavaScript (ES6+)
 
+---
+
+### 🛠 Development Tools
+- GitHub version control
+- WebStorm IDE
+
+---
+
 ### 🧩 Core Concepts
 - Class data structures
 - Module Importing
@@ -78,10 +90,6 @@ And that's all folks!
 - DOM manipulation
 - Data validation
 - Data sorting
-
-### 🛠 Development Tools
-- GitHub version control
-- WebStorm IDE
 
 ---
 
@@ -103,7 +111,7 @@ And that's all folks!
 | `constructor()`              | creates an instance of an object                                                                                                          |          
 | `sort(a,b)`                  | sorts an array by looping through each element, comparing that element to the next one, and swapping places depending on how they compare |                                                                                  |                                                                                                      |   
 
-## 📘 What We Learned
+## 📘 What I Learned
 There's a lot learned in this project. How you can work with array in JavaScript is completely different than any other language.
 Methods like sort() and reduce() allow you to sort an array or reduce it to one value however you want. How these methods
 work depends on the function you pass to them. This make JavaScript a very versitile language to use.<br>
