@@ -49,10 +49,10 @@ For full program details, refer to [Program Requirements](./assets/ProgramInstru
 And that's all folks!
 
 ---
-
 ## 🚀 Live Demo
+> ⬇️ **Click the link below to open the app in your browser and try it yourself!**⬇️
 
-[![Open Demo](https://img.shields.io/badge/▶%20Open%20Live%20Demo-ff4b4b?style=for-the-badge)](https://bstearns07.github.io/MovieTracker/)
+👉 [![Open Demo](https://img.shields.io/badge/▶%20Open%20Live%20Demo-ff4b4b?style=for-the-badge)](https://bstearns07.github.io/MovieTracker/)
 
 ![Demo](assets/demo.gif)
 
